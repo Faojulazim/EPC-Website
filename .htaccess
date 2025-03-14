@@ -1,0 +1,7 @@
+#KONSOLEH AREA START - PLEASE DO NOT EDIT MANUALLY BETWEEN THESE LINES
+DirectoryIndex index.html
+Options -Indexes
+#KONSOLEH AREA END - PLEASE ADD MANUAL CHANGES BELOW
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\.epc-tech\.de [NC]
+RewriteRule (.*) http://www.epc-tech.de/$1 [R=301,L]
