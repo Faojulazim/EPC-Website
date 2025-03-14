@@ -280,7 +280,9 @@
     </main>
     <div class="font-Overpass text-center lg:px-10 xl:px-20 2xl:px-40 mt-10">
       <div class="text-white bg-zinc-800 py-3 rounded-md" id="newNews">
-        <h1 class="text-xl mt-1 tracking-wide" id="news">Social Media Links and E-mail are still in development</h1>
+        <h1 class="text-xl mt-1 tracking-wide" id="news">
+          Social Media Links and E-mail are still in development
+        </h1>
       </div>
     </div>
     <footer
@@ -422,6 +424,7 @@
         </div>
       </div>
     </footer>
+    <script src="changeLanguage.js"></script>
     <script src="toggleOthers.js"></script>
     <script>
       const toggleBtn = document.querySelectorAll("#toggleBtn");
@@ -725,7 +728,8 @@
       const toggler = document.querySelectorAll("[data-languageSelection]");
       toggler.forEach((items) => {
         if (items.value == "Deutsch") {
-          document.querySelector("#news").innerHTML = "Social Media links sowie E-mail funktionieren leider noch nicht, </br> wir bitten um Ihr verständnis";
+          document.querySelector("#news").innerHTML =
+            "Social Media links sowie E-mail funktionieren leider noch nicht, </br> wir bitten um Ihr verständnis";
 
           document.querySelectorAll("[data-home]").forEach((items, i) => {
             items.innerText = "Startseite";
@@ -748,7 +752,8 @@
           document.querySelector("#copyright").innerText =
             "Alle Rechte Vorbehalten -  EPC-Tech - 2025";
         } else {
-          document.querySelector("#news").innerText = "Social Media Links and E-mail are still in development";
+          document.querySelector("#news").innerText =
+            "Social Media Links and E-mail are still in development";
           document.querySelector("[data-daten]").innerText = "Privacy Policy";
           document.querySelectorAll("[data-home]").forEach((items, i) => {
             items.innerText = "Home";
@@ -798,7 +803,8 @@
             document.querySelector("#copyright").innerText =
               "Alle Rechte Vorbehalten -  EPC-Tech - 2025";
           } else {
-            document.querySelector("#news").innerText = "Social Media Links and E-mail are still in development";
+            document.querySelector("#news").innerText =
+              "Social Media Links and E-mail are still in development";
             document.querySelector("[data-daten]").innerText = "Privacy Policy";
             document.querySelectorAll("[data-home]").forEach((items, i) => {
               items.innerText = "Home";
