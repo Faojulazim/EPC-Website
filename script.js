@@ -1,3 +1,26 @@
+const dataSelection = document.querySelectorAll("[data-languageSelection]");
+dataSelection.forEach((items) => {
+  items.addEventListener("change", (e) => {
+    dataSelection.forEach((items2) => {
+      items2.value = items.value;
+      localStorage.setItem("language", `${items.value}`);
+      getLang();
+    });
+  });
+});
+function getLang() {
+  if (localStorage.getItem("language") === "Deutsch") {
+    dataSelection.forEach((items) => {
+      items.value = "Deutsch";
+    });
+  } else if (localStorage.getItem("language") === "English") {
+    dataSelection.forEach((items) => {
+      items.value = "English";
+    });
+  }
+}
+getLang();
+
 const toggler = document.querySelectorAll("[data-languageSelection]");
 toggler.forEach((items) => {
   if (items.value == "Deutsch") {
@@ -245,14 +268,5 @@ toggler.forEach((items) => {
       document.querySelector("#contactBtn").innerText = "Submit";
       document.querySelector("[data-call]").innerText = "Call";
     }
-  });
-});
-const dataSelection = document.querySelectorAll("[data-languageSelection]");
-dataSelection.forEach((items) => {
-  items.addEventListener("change", (e) => {
-    dataSelection.forEach((items2) => {
-      items2.value = items.value;
-      localStorage.setItem("language", `${items.value}`);
-    });
   });
 });
