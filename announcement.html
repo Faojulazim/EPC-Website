@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/Logos/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,20 +47,27 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "TLT5RV3zQccRt4jjY",
+        });
+      })();
+    </script>
     <link href="dist/style.css" rel="stylesheet" />
-    <title>Aktuelles</title>
+    <script defer src="script.js"></script>
+    <script defer src="changeNav.js"></script>
+    <script defer src="toggleOthers.js"></script>
+    <title>Welcome</title>
   </head>
-  <body
-    class="bg-black min-h-[100vh] scroll-smooth transition-all duration-300"
-    data-body=""
-  >
-    <main
-      class="font-Overpass relative lg:px-10 xl:px-20 2xl:px-40 pt-5"
-      id="home"
-    >
+  <body class="bg-black scroll-smooth transition-all duration-300" data-body="">
+    <main class="font-Overpass relative lg:px-10 xl:px-20 2xl:px-40" id="home">
       <nav
-        class="flex items-center px-5 z-[200] justify-start lg:gap-x-0 2xl:gap-x-10 sticky top-0 text-white py-5 w-full lg:sticky bg-zinc-800 lg:left-0 lg:rounded-full lg:top-[25px] lg:py-3 lg:mt-0 lg:px-5 xl:px-10"
+        class="flex items-center px-5 z-[200] justify-start lg:gap-x-0 2xl:gap-x-10 sticky top-0 text-white py-5 w-full lg:sticky bg-zinc-800 lg:left-0 lg:rounded-full lg:top-[25px] lg:py-3 lg:mt-5 lg:px-5 xl:px-10"
         data-bgzinc400=""
       >
         <div
@@ -75,7 +83,7 @@
           >
             <div>
               <div
-                class="bg-slate-900 w-[70px] h-[30px] flex items-center px-1 rounded-full transition-all"
+                class="bg-slate-900 w-[70px] h-[30px] flex items-center px-1 rounded-full transition-all cursor-pointer"
                 id="toggleBtn"
               >
                 <div
@@ -99,7 +107,7 @@
               <option class="" value="English">English</option>
             </select>
             <i
-              class="fa-solid fa-bars text-white text-2xl cursor-pointer lg:hidden"
+              class="fa-solid fa-bars text-white cursor-pointer text-2xl lg:hidden"
               id="hamburger"
               data-textblack=""
             ></i>
@@ -107,7 +115,7 @@
         </div>
         <div class="flex items-center lg:w-full justify-between">
           <ul class="hidden lg:flex lg:gap-x-5 2xl:gap-x-7" id="list">
-            <a href="index.html">
+            <a href="index.html#home">
               <li
                 class="lg:text-[13px] xl:text-[15px] w-fit relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
                 data-allListItems=""
@@ -116,7 +124,7 @@
                 Home
               </li>
             </a>
-            <a href="service.html#service">
+            <a href="service.html#home">
               <li
                 class="lg:text-[13px] xl:text-[15px] w-fit relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
                 data-allListItems=""
@@ -125,7 +133,7 @@
                 Services
               </li>
             </a>
-            <a href="gallery.html">
+            <a href="gallery.html#home">
               <li
                 class="lg:text-[13px] xl:text-[15px] w-fit relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
                 data-allListItems=""
@@ -144,7 +152,7 @@
               </li>
             </a>
 
-            <a href="about.html">
+            <a href="about.html#home">
               <li
                 class="lg:text-[13px] xl:text-[15px] w-fit relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
                 data-allListItems=""
@@ -154,7 +162,7 @@
               </li>
             </a>
 
-            <a href="impressum.html">
+            <a href="impressum.html#home">
               <li
                 class="lg:text-[13px] xl:text-[15px] w-fit relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
                 data-allListItems=""
@@ -168,7 +176,7 @@
             class="flex gap-x-5 sm:gap-x-5 2xl:gap-x-10 lg:ml-5 hidden lg:block xl:ml-10 lg:flex lg:items-center"
           >
             <div
-              class="bg-slate-900 w-[70px] h-[30px] flex items-center px-1 rounded-full transition-all"
+              class="bg-slate-900 w-[70px] h-[30px] flex items-center px-1 rounded-full transition-all cursor-pointer"
               id="toggleBtn"
             >
               <div
@@ -190,10 +198,7 @@
               <option class="outline-none" value="Deutsch">Deutsch</option>
               <option class="outline-none" value="English">English</option>
             </select>
-            <i
-              class="fa-solid fa-bars text-2xl lg:hidden cursor-pointer"
-              id="hamburger"
-            ></i>
+            <i class="fa-solid fa-bars text-2xl lg:hidden" id="hamburger"></i>
           </div>
         </div>
       </nav>
@@ -212,13 +217,13 @@
               alt=""
             />
             <i
-              class="fa-solid fa-close text-white text-2xl transition-all duration-[300ms] ease-linear rotate-[90deg] lg:hidden cursor-pointer"
+              class="fa-solid fa-close text-white text-2xl transition-all duration-[300ms] ease-linear rotate-[90deg] cursor-pointer lg:hidden"
               id="close"
               data-textblack=""
             ></i>
           </div>
           <ul class="flex flex-col gap-y-5">
-            <a href="index.html">
+            <a href="index.html#home">
               <li
                 class="lg:text-[13px] xl:text-[15px] w-fit relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
                 data-allListItems=""
@@ -227,7 +232,7 @@
                 Home
               </li>
             </a>
-            <a href="service.html#service">
+            <a href="service.html#home">
               <li
                 class="lg:text-[13px] xl:text-[15px] w-fit relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
                 data-allListItems=""
@@ -236,7 +241,7 @@
                 Services
               </li>
             </a>
-            <a href="gallery.html">
+            <a href="gallery.html#home">
               <li
                 class="lg:text-[13px] xl:text-[15px] w-fit relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
                 data-allListItems=""
@@ -245,7 +250,7 @@
                 Gallery
               </li>
             </a>
-            <a href="announcement.html">
+            <a href="announcement.html#home">
               <li
                 class="lg:text-[13px] xl:text-[15px] w-fit relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
                 data-allListItems=""
@@ -255,7 +260,7 @@
               </li>
             </a>
 
-            <a href="about.html">
+            <a href="about.html#home">
               <li
                 class="lg:text-[13px] xl:text-[15px] w-fit relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
                 data-allListItems=""
@@ -265,7 +270,7 @@
               </li>
             </a>
 
-            <a href="impressum.html">
+            <a href="impressum.html#home">
               <li
                 class="lg:text-[13px] xl:text-[15px] w-fit relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
                 data-allListItems=""
@@ -383,37 +388,47 @@
           <div class="flex gap-x-5">
             <div>
               <div>
-                <i
-                  class="fa-brands fa-facebook text-2xl hover:text-Secondary cursor-pointer"
-                ></i>
+                <a href="https://wa.me/17641742121" target="_blank">
+                  <i
+                    class="fa-brands fa-whatsapp text-2xl hover:text-Secondary cursor-pointer"
+                  ></i
+                ></a>
               </div>
             </div>
             <div>
               <div>
-                <i
-                  class="fa-brands fa-x-twitter text-2xl hover:text-Secondary cursor-pointer"
-                ></i>
+                <a href="https://x.com/EPC_Tech" target="_blank">
+                  <i
+                    class="fa-brands fa-x-twitter text-2xl hover:text-Secondary cursor-pointer"
+                  ></i
+                ></a>
               </div>
             </div>
             <div>
               <div>
-                <i
-                  class="fa-brands fa-discord text-2xl hover:text-Secondary cursor-pointer"
-                ></i>
+                <a href="https://discord.gg/6KYyfrcw9r" target="_blank">
+                  <i
+                    class="fa-brands fa-discord text-2xl hover:text-Secondary cursor-pointer"
+                  ></i
+                ></a>
               </div>
             </div>
             <div>
               <div>
-                <i
-                  class="fa-brands fa-instagram text-2xl hover:text-Secondary cursor-pointer"
-                ></i>
+                <a href="https://www.instagram.com/epc.tech/" target="_blank"
+                  ><i
+                    class="fa-brands fa-instagram text-2xl hover:text-Secondary cursor-pointer"
+                  ></i
+                ></a>
               </div>
             </div>
             <div>
               <div>
-                <i
-                  class="fa-brands fa-linkedin text-2xl hover:text-Secondary cursor-pointer"
-                ></i>
+                <a href="" target="_blank">
+                  <i
+                    class="fa-brands fa-linkedin text-2xl hover:text-Secondary cursor-pointer"
+                  ></i>
+                </a>
               </div>
             </div>
           </div>
